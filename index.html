@@ -1,0 +1,78 @@
+<html>
+    <title>
+    Ground selection
+    </title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='final.css') }}">
+    </head>
+<body background="{{ url_for('static', filename='logo.jpg') }}">
+
+<p style="font-size:20px"><b>Select Stadium</b></p>
+<select>
+            <option>Himachal Pradesh Cricket Association Stadium</option>
+									<option>Feroz Shah Kotla</option>
+									<option>Punjab Cricket Association IS Bindra Stadium</option>
+									<option>Dr YS Rajasekhara Reddy Cricket Stadium</option>
+									<option>Maharashtra Cricket Association Stadium</option>
+									<option>Barabati Stadium</option>
+									<option>Eden Gardens</option>
+									<option>MA Chidambaram Stadium</option>
+									<option>Holkar Cricket Stadium</option>
+									<option>Vidarbha Cricket Association Stadium</option>
+									<option>Wankhede Stadium</option>
+									<option>Green Park</option>
+									<option>Edgbaston</option>
+									<option>Kennington Oval</option>
+									<option>SuperSports Park</option>
+									<option>Newsland</option>
+									<option>New Wanderers</option>
+									<option>St.George</option>
+									<option>Kingsmead</option>
+									<option>Sydney Cricket Ground</option>
+        </select>
+
+<h1 style="font-size:20px">Select Team 1</h1>
+        <select>
+			<option>India</option>
+			<option>Australia</option>
+			<option>Pakistan</option>
+			<option>West Indies</option>
+			<option>Shri Lanka</option>
+			<option>South africa</option>
+			<option>New Zeland</option>
+        </select>
+<h1 style="font-size:20px;">Select Team 2</h1>
+        <select>
+			<option>India</option>
+			<option>Australia</option>
+			<option>Pakistan</option>
+			<option>West Indies</option>
+			<option>Shri Lanka</option>
+			<option>South africa</option>
+			<option>New Zeland</option>
+        </select>
+
+ <form action="{{ url_for('pr') }}" , method="POST">
+
+ <div class="dv">
+  <label style="font-size:20px;font-family:Arial;text-align:center;"><b>Enter team's current score:</b></label><br>
+  <input type="text" name="curr_score"><br>
+  <label style="font-size:20px;font-family:Arial;"><b>Enter the number of wicket's lost:</b></label><br>
+  <input type="text" name="lost"><br>
+  <label style="font-size:20px;font-family:Arial;"><b>Enter the number of overs bowled:</b></label><br>
+  <input type="text" name="overs"><br>
+  <label style="font-size:20px;font-family:Arial;"><b>Enter runs scored by the batsman in strike:</b></label><br>
+  <input type="text" name="strike"><br>
+  <label style="font-size:20px;font-family:Arial;color:white;"><b>Enter runs scored by the batsman in non-strike:</b></label><br>
+  <input type="text" name="non-strike"><br>
+  <label style="font-size:20px;font-family:Arial;"><b>Enter the Target:</b></label><br>
+  <input type="text" name="target"><br><br>
+  <button type="submit" class="button">CLICK TO SEE RESULT</button>
+  </div>
+</form>
+ <h2 style="color:white">{{ pred }}</h2>
+
+</body>
+</html>
